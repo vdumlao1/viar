@@ -68,7 +68,7 @@ const MainMenu = () => {
           className="relative text-center z-10 px-4"
         >
           <h1 className="text-5xl md:text-7xl font-display font-bold mb-4 neon-text">
-            CareerVR
+            ViaR
           </h1>
           <p className="text-lg md:text-xl text-secondary-foreground max-w-xl mx-auto">
             Step into your future. Explore careers through immersive virtual reality simulations.
