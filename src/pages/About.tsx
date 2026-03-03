@@ -20,11 +20,13 @@ const About = () => {
           <h2 className="text-2xl font-display font-bold text-foreground mb-4">Our Story</h2>
           <div className="space-y-4 text-secondary-foreground text-sm leading-relaxed">
             <p>
-             Our shared goal is to help young adults with the struggle and anxiety that comes with the term “adulthood.”
+             ViaR was founded by a group of college students at UWT. Our shared goal is to help young adults with the struggle and anxiety that comes with the term “adulthood.”
             <p>
-              Too many students graduate uncertain about their career path. Traditional career counseling relies on descriptions and assessments — but nothing compares to actually stepping into a role. That's where CareerVR comes in.
+              Too many students graduate uncertain about their career path. Traditional career counseling relies on descriptions and assessments — but nothing compares to actually stepping into a role. That's where ViaR comes in.
             </p>
-            <p>  We all have our own stories of navigating through these struggles, and we hope to take part in the fulfillment our users will find through our VR game
+            <p> We all have our own stories of navigating through these struggles, and we hope to take part in the fulfillment our users will find through ViaR. 
+              <p> - Vanessa, Crane, Tin, Franklin
+              </p>
             </p>
             </p>
           </div>
