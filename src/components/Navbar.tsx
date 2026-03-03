@@ -22,7 +22,7 @@ const Navbar = () => {
       <div className="container flex items-center justify-between h-16">
         <Link to="/" className="flex items-center gap-2">
           <Gamepad2 className="w-6 h-6 text-primary" />
-          <span className="font-display font-bold text-lg neon-text">CareerVR</span>
+          <span className="font-display font-bold text-lg neon-text">ViaR</span>
         </Link>
         <div className="flex items-center gap-1">
           {navItems.map((item) => (
