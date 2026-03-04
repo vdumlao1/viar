@@ -15,24 +15,25 @@ import NotFound from "./pages/NotFound";
 const queryClient = new QueryClient();
 
 const App = () => (
-  <QueryClientProvider client={queryClient}>
-    <TooltipProvider>
-      <Toaster />
-      <Sonner />
-      <BrowserRouter>
-        <Navbar />
-        <Routes>
-          <Route path="/" element={<Index />} />
-          <Route path="/experiences" element={<NewExperiences />} />
-          <Route path="/achievements" element={<Achievements />} />
-          <Route path="/profile" element={<Profile />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/simulation/:roleId" element={<SimulationPage />} />
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-      </BrowserRouter>
-    </TooltipProvider>
-  </QueryClientProvider>
+    <QueryClientProvider client={queryClient}>
+        <TooltipProvider>
+            <Toaster />
+            <Sonner />
+            {/* ADD basename HERE */}
+            <BrowserRouter basename="/viar">
+                <Navbar />
+                <Routes>
+                    <Route path="/" element={<Index />} />
+                    <Route path="/experiences" element={<NewExperiences />} />
+                    <Route path="/achievements" element={<Achievements />} />
+                    <Route path="/profile" element={<Profile />} />
+                    <Route path="/about" element={<About />} />
+                    <Route path="/simulation/:roleId" element={<SimulationPage />} />
+                    <Route path="*" element={<NotFound />} />
+                </Routes>
+            </BrowserRouter>
+        </TooltipProvider>
+    </QueryClientProvider>
 );
 
 export default App;
