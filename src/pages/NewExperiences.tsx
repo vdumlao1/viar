@@ -92,7 +92,7 @@ const NewExperiences = () => {
                         className="glass-card p-5 hover:neon-border transition-all cursor-pointer group"
                         onClick={() => {
                             // We check if the title of the role is "Registered Nurse"
-                            if (role.title === "Registered Nurse") {
+                            if (role.title.includes("Nurse")) {
                                 window.location.href = "/viar/healthcare/rn/index.html";
                             } else {
                                 // Everyone else goes to the normal VR simulation page
