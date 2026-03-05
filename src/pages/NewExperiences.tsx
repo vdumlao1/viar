@@ -32,8 +32,7 @@ const NewExperiences = () => {
             <motion.div
               key="careers"
               initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0, x: -50 }}
+              animate={{ opacity: 1 }} exit={{ opacity: 0, x: -50 }}
               className="grid gap-3"
             >
               {careers.map((c, i) => {
@@ -91,7 +90,15 @@ const NewExperiences = () => {
                         transition={{ delay: i * 0.1 }}
                         whileHover={{ scale: 1.01 }}
                         className="glass-card p-5 hover:neon-border transition-all cursor-pointer group"
-                        onClick={() => navigate(`/simulation/${role.id}`)}
+                        onClick={() => {
+                            // We check if the title of the role is "Registered Nurse"
+                            if (role.title === "Registered Nurse") {
+                                window.location.href = "/viar/healthcare/rn/index.html";
+                            } else {
+                                // Everyone else goes to the normal VR simulation page
+                                navigate(`/simulation/${role.id}`);
+                            }
+                        }}
                       >
                         <div className="flex items-start justify-between mb-2">
                           <h4 className="font-display font-semibold text-foreground group-hover:text-primary transition-colors">
