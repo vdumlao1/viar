@@ -1,6 +1,6 @@
 import { Link, useLocation } from "react-router-dom";
 import { motion } from "framer-motion";
-import { Gamepad2 } from "lucide-react";
+import { Gamepad2, ArrowLeft } from "lucide-react";
 
 const navItems = [
   { path: "/", label: "Menu" },
@@ -20,10 +20,13 @@ const Navbar = () => {
       className="fixed top-0 left-0 right-0 z-50 glass-card border-t-0 border-x-0 rounded-none"
     >
       <div className="container flex items-center justify-between h-16">
-        <Link to="/" className="flex items-center gap-2">
-          <Gamepad2 className="w-6 h-6 text-primary" />
-          <span className="font-display font-bold text-lg neon-text">ViaR</span>
-        </Link>
+       <Link to="/" className="flex items-center gap-2">
+  {location.pathname !== "/" && (
+    <ArrowLeft className="w-4 h-4 text-primary" />
+  )}
+  <Gamepad2 className="w-6 h-6 text-primary" />
+  <span className="font-display font-bold text-lg neon-text">ViaR</span>
+</Link>
         <div className="flex items-center gap-1">
           {navItems.map((item) => (
             <Link
